@@ -1,0 +1,23 @@
+import org.junit.Test;
+public class RSSReaders
+{
+  @Test
+      public void testAssertEquals()
+      {
+        assertEquals("failure - strings are not equal", "line", "line");
+      }
+      
+  @Test
+   public void testAssertions() {
+      //test data
+      String str1 = new String ("abc");
+      String str2 = new String ("abc");
+      String str3 = null;
+      String str4 = "abc";
+      String str5 = "abc"; 
+      
+      assertEquals(str1, str2);
+      
+      assertSame(str4,str5);
+      
+ }     
