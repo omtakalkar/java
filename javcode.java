@@ -32,9 +32,8 @@ public class googlefeeds
  in.close; 
 return line;
 }
-catch (IOException ioe)
-
+catch(IOException ioe)
 {
-  system.out.println("error");
+  System.out.println("error");
 }
 }
