@@ -1,5 +1,9 @@
 import java.io.*;
 import java.net.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.SQLException;
 
 public class googlefeeds
 {
@@ -37,3 +41,34 @@ catch(IOException ioe)
   System.out.println("error");
 }
 }
+
+
+public class SelectStatementSample
+{
+    public static void main(String[] args) throws Exception
+    {
+        Connection connection = null;
+        try
+        {
+            
+            Class.forName("com.mysql.jdbc.Driver");
+ 
+            String url = "jdbc:mysql://localhost/testdb";
+            String user = "root";
+            String password = "";
+            connection = DriverManager.getConnection(url, user, password);
+            Statement stmt = connection.createStatement();
+            String recods = line;
+            String sql = "insert into users (first name,last name,numbers )"+ values(? ? ?);
+           PreparedStatement preparedStmt = conn.prepareStatement(sql);
+          
+          preparedStmt.execute();
+          connection.close;
+        }  
+          catch (Exception e)
+    {
+      System.err.println("Got an exception!");
+      System.err.println(e.getMessage());
+   }
+}     
+          
